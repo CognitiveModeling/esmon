@@ -1,0 +1,181 @@
+# TRANSFER_FUNCTION:                TANH
+# TRANSFER_FUNCTION_LOGISTIC_PARAM: 1.0
+# RES_SIZE:                         {3}
+# RESERVOIR_BIAS:                   (0.0,0.0)
+# LEAKAGE_RATE:                     {1.0}
+# LEAKAGE_ASSIGN:                   LA_SAME
+# CONNECTIVITY:                     {1.0}
+# SPECTRAL_RADIUS:                  {0.8}
+# TRANSFER_FUNCTION_RATIO:          1.0
+# TOPOLOGY:                         RANDOM
+# RES_W_BOUNDS:                     (-1.0,1.0)
+# CONNECTIVITY_OUTSUB:              0.0
+# USE_W_BACK:                       true
+# BACK_BOUNDS:                      (-0.01,0.01)
+# USE_INPUT:                        false
+# INPUT_BOUNDS:                     (-0.01,0.01)
+# INPUT_SIZE:                       0
+# OUTPUT_SIZE:                      1
+# TRANSFER_FUNCTION_OUT:            ID
+# OUTPUT_LAYER_RECURRENCE:          false
+# SIN_PARAM_SIZE:                   2
+# SIN_PARAM:                        {0.2,0.0}
+# NUMBER_OF_RUNS:                   100
+# NUMBER_OF_RUN_REPEAT:             100
+# SEL_THRESH:                       0.01
+# LEL_THRESH:                       0.0010
+# FILE_WITH_SAMPLES:                {seq_MSO1_alpha7_700_Noise0.dat}
+# SEQ_TARGET_NUM:                   {*,*,*}
+# SEQ_START:                        {0,100,400}
+# SEQ_STOP:                         {99,399,699}
+# SEQ_PURPOSE:                      {w,t,e}
+# NOISE_TYPE:                       NOISE_NONE
+# NOISE_PARAM:                      (-1.0E-6,1.0E-6)
+# CONFIG_METHOD:                    CM_DiffEvolution
+# CONFIG_EA_MODE:                   CFG_EA_MODE_PERMANENT
+# CONFIG_EA_POP_SIZE:               100
+# CONFIG_EA_DIFF_WEIGHT:            0.1
+# CONFIG_EA_CROSS_PROB:             0.1
+# CONFIG_EA_NUM_GEN:                10
+# CONFIG_EA_INIT:                   CFG_EA_INIT_NONE
+# CONFIG_EA_FIT_LEN:                180
+# CONFIG_EA_MARGIN_MODULE:          {1.0E-4}
+# CONFIG_EA_COEVOL_ORDER_METHOD:    CFG_EA_ORDER_NORMAL
+# CONFIG_EA_COEVOL_ORDER:           {0}
+# CONFIG_EA_COEVOL_SORT_MIN_NUM:    99
+# CONFIG_EA_VALIDATION_LENGTH:      0
+# CONFIG_EA_COMP_IDENT_OK_LEVEL:    1.0E-4
+# CONFIG_EA_SUPPRESSION_LEVEL:      1.0E-10
+# DISTORT_METHOD:                   DISTORT_CONST
+# DISTORT_PERIOD:                   {300}
+# DISTORT_STRENGTH:                 {0.01}
+# DISTORT_DECAY:                    {0.0010}
+# DISTORT_SEQ:                      {0,0,0}
+# SAVE_RUN_DATA:                    true
+# LOAD_ESN:                         {false}
+# LOAD_SEED:                        {false}
+# LOAD_ESN_FILE:                    {sin_module_freq_01_03.dat}
+# PROJECT NAME:                     RC_Experiment062_20170514
+# JAVA REVISION:                    1.6.0_21
+# USER COMMENT:                     NONE
+# RANDOM SEED:                      {2020}
+
+TYPE_MODULE_0
+# type of loaded module
+         VALUE:
+MODULE_0    ESN
+
+SEEDING_VALUE_FOR_RANDOM_GENERATORS_MODULE_0
+# value is used for evolutionary synchronization of mESN
+         VALUES:
+MODULE_0    2020
+
+RESPONSIBILITY_MODULE_0
+# none
+        VALUE:
+VALUE_0    1.0
+
+MINIMUM_AND_MAXIMUM_OF_RESPONSIBILITY_MODULE_0
+# allowed range to tune amplitudes of module's outputs
+# The left value is the smallest allowed amplitude.
+# The right value is the largest allowed amplitude.
+            RANGE:
+OUTPUT_0 (0.0,1.0)
+
+PARAMETERS_OF_TRAINING_SEQUENCE_MODULE_0
+# none
+                    PARAMETERS:
+OSCILLATOR_0   (FREQ=0.85)
+
+OFB_WEIGHTS_MODULE_0
+# none
+                    OUTPUT_NEURON:
+RES_NEURON_0  0.002376239198379926
+RES_NEURON_1 2.0241128705769315E-4
+RES_NEURON_2  0.002995782716405059
+
+RESERVOIR_INIT_WEIGHTS_MODULE_0
+# none
+               RESERVOIR_NEURON_0  RESERVOIR_NEURON_1  RESERVOIR_NEURON_2
+RES_NEURON_0 -0.41030094627686253  0.5214800780290694 -0.2787968619734118
+RES_NEURON_1    0.930090502694755   0.604996860108703 0.02024112870576933
+RES_NEURON_2 -0.06435219643315859 -0.4899979759049269 -0.9385953058415863
+
+CONNECTIVITY_OF_MODULES_MODULE_0
+# On the main diagonal there are values of exclusive connectivity.
+# Outside the main diagonal there is connectivity in overlaps between the modules.
+         MODULE:
+MODULE_0     1.0
+
+CONNECTIVITY_MATRIX_OF_RESERVOIR_MODULE_0
+# none
+               END_NEURON_0 END_NEURON_1 END_NEURON_2
+BEGIN_NEURON_0            1            1            1
+BEGIN_NEURON_1            1            1            1
+BEGIN_NEURON_2            1            1            1
+
+ACTIVATION_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             ACTIVATIONS:
+RES_NEURON_0         TANH
+RES_NEURON_1         TANH
+RES_NEURON_2         TANH
+
+BIAS_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             BIASES:
+RES_NEURON_0     0.0
+RES_NEURON_1     0.0
+RES_NEURON_2     0.0
+
+MODULE_SIZES_MODULE_0
+# none
+         SIZES:
+MODULE_0      3
+
+SPECTRAL_RADII_OF_RESERVOIR_MODULES_MODULE_0
+# none
+         SPECTRAL_RADII:
+MODULE_0             0.8
+
+RESERVOIR_TOPOLOGY_MODULE_0
+# none
+        VALUES:
+VALUE_0  RANDOM
+
+LEAKAGE_RATE_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             LEAKAGE_RATE:
+RES_NEURON_0           1.0
+RES_NEURON_1           1.0
+RES_NEURON_2           1.0
+
+VALID_RANGES_OF_RESERVOIR_NEURONS_MODULE_0
+# Dummies (-,-) are placeholders to save valid ranges as a matrix.
+                                              INTERVAL:
+NEURON_0 (-0.0013441336334689892,0.0013440417898227899)
+NEURON_1 (-0.0015219026121845015,0.0015218277153896918)
+NEURON_2  (-0.0020603156874127826,0.002060305795591422)
+
+OUTPUT_WEIGHTS_MODULE_0
+# first END neurons are reservoir neurons;
+# next END neurons are ESN's output neurons (self-recurrent connections);
+# final END neurons are input neurons
+                  END_NEURON_0        END_NEURON_1       END_NEURON_2
+OUT_NEURON_0 526.7453826079145 -469.31356801791117 103.96226565382676
+
+ACTIVATION_OF_OUTPUT_NEURONS_MODULE_0
+# none
+             ACTIVATIONS:
+OUT_NEURON_0           ID
+
+BIAS_OF_OUTPUT_NEURONS_MODULE_0
+# none
+             BIAS:
+OUT_NEURON_0   0.0
+
+MINIMUM_AND_MAXIMUM_OF_OUTPUT_NEURONS_MODULE_0
+# The left value is the smallest value.
+# The right value is the largest value.
+                                         VALUES:
+VALUE_0 (-0.9999809539971961,0.9999998945903477)

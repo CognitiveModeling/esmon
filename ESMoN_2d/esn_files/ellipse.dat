@@ -1,0 +1,250 @@
+# TRANSFER_FUNCTION:                TANH
+# TRANSFER_FUNCTION_LOGISTIC_PARAM: 1.0
+# RES_SIZE:                         {7}
+# RESERVOIR_BIAS:                   (0.0,0.0)
+# LEAKAGE_RATE:                     {0.5}
+# LEAKAGE_ASSIGN:                   LA_SAME
+# CONNECTIVITY:                     {1.0}
+# SPECTRAL_RADIUS:                  {0.9}
+# TRANSFER_FUNCTION_RATIO:          1.0
+# TOPOLOGY:                         RANDOM
+# RES_W_BOUNDS:                     (-1.0,1.0)
+# CONNECTIVITY_OUTSUB:              0.0
+# USE_W_BACK:                       true
+# BACK_BOUNDS:                      (-0.5,0.5)
+# USE_INPUT:                        true
+# INPUT_BOUNDS:                     (-0.3,0.3)
+# INPUT_SIZE:                       1
+# OUTPUT_SIZE:                      2
+# TRANSFER_FUNCTION_OUT:            ID
+# OUTPUT_LAYER_RECURRENCE:          false
+# SIN_PARAM_SIZE:                   2
+# SIN_PARAM:                        {0.2,0.0}
+# NUMBER_OF_RUNS:                   200
+# NUMBER_OF_RUN_REPEAT:             100
+# SEL_THRESH:                       0.01
+# LEL_THRESH:                       0.0010
+# FILE_WITH_SAMPLES:                {Ellipse_2x300_NoScale_Offset0_UniformPhi078-235_Noise0_200seq}
+# SEQ_TARGET_NUM:                   {*,*,*}
+# SEQ_START:                        {0,50,350}
+# SEQ_STOP:                         {49,349,599}
+# SEQ_PURPOSE:                      {w,t,e}
+# NOISE_TYPE:                       NOISE_NONE
+# NOISE_PARAM:                      (-1.0E-6,1.0E-6)
+# CONFIG_METHOD:                    CM_DiffEvolution
+# CONFIG_EA_MODE:                   CFG_EA_MODE_PERMANENT
+# CONFIG_EA_POP_SIZE:               100
+# CONFIG_EA_DIFF_WEIGHT:            0.1
+# CONFIG_EA_CROSS_PROB:             0.1
+# CONFIG_EA_NUM_GEN:                10
+# CONFIG_EA_INIT:                   CFG_EA_INIT_NONE
+# CONFIG_EA_FIT_LEN:                180
+# CONFIG_EA_MARGIN_MODULE:          {1.0E-4}
+# CONFIG_EA_COEVOL_ORDER_METHOD:    CFG_EA_ORDER_NORMAL
+# CONFIG_EA_COEVOL_ORDER:           {0}
+# CONFIG_EA_COEVOL_SORT_MIN_NUM:    99
+# CONFIG_EA_VALIDATION_LENGTH:      0
+# CONFIG_EA_COMP_IDENT_OK_LEVEL:    1.0E-4
+# CONFIG_EA_SUPPRESSION_LEVEL:      1.0E-10
+# DISTORT_METHOD:                   DISTORT_CONST
+# DISTORT_PERIOD:                   {300,300}
+# DISTORT_STRENGTH:                 {0.01,0.01}
+# DISTORT_DECAY:                    {0.0010,0.0010}
+# DISTORT_SEQ:                      {0,0,0}
+# SAVE_RUN_DATA:                    true
+# LOAD_ESN:                         {false}
+# LOAD_SEED:                        {false}
+# LOAD_ESN_FILE:                    {...}
+# PROJECT NAME:                     RC_Experiment063_20180615_SaveWout_SaveMatchingEsn_300seeds
+# JAVA REVISION:                    1.6.0_21
+# USER COMMENT:                     NONE
+# RANDOM SEED:                      {29896}
+
+TYPE_MODULE_0
+# type of loaded module
+         VALUE:
+MODULE_0    ESN
+
+OUTPUT_BIAS_MODULE_0
+# none
+         VALUE:
+OUTPUT_0    0.0
+OUTPUT_1    0.0
+
+MINIMUM_AND_MAXIMUM_OF_OUTPUT_BIAS_MODULE_0
+# allowed range to tune amplitudes of module's output bias
+# The left value is the smallest allowed bias.
+# The right value is the largest allowed bias.
+         RANGE_0 RANGE_1
+OUTPUT_0   (0.0,    1.0)
+OUTPUT_1   (0.0,    1.0)
+
+RESPONSIBILITY_MODULE_0
+# none
+        VALUE:
+VALUE_0    1.0
+VALUE_1    1.0
+
+MINIMUM_AND_MAXIMUM_OF_RESPONSIBILITY_MODULE_0
+# allowed range to tune amplitudes of module's outputs
+# The left value is the smallest allowed amplitude.
+# The right value is the largest allowed amplitude.
+            RANGE:
+OUTPUT_0 (0.0,1.0)
+OUTPUT_1 (0.0,1.0)
+
+PARAMETERS_OF_TRAINING_SEQUENCE_MODULE_0
+# none
+                  PARAMETERS:
+DYNAMICS_0 (seq_type=ellipse)
+
+SEEDING_VALUE_FOR_RANDOM_GENERATORS_MODULE_0
+# value is used for evolutionary synchronization of mESN
+         VALUES:
+MODULE_0   29896
+
+INPUT_WEIGHTS_MODULE_0
+# none
+                    INPUT_NEURON:
+RES_NEURON_0   0.1857763949135816
+RES_NEURON_1  0.07724867000810492
+RES_NEURON_2 -0.07409199205969383
+RES_NEURON_3  0.23562195846879325
+RES_NEURON_4   0.2249959710570169
+RES_NEURON_5  0.09982783730732925
+RES_NEURON_6 -0.06701828373449051
+
+ACTIVATION_OF_INPUT_NEURONS_MODULE_0
+# none
+            ACTIVATIONS:
+IN_NEURON_0           ID
+
+VALID_RANGES_OF_INPUT_NEURONS_MODULE_0
+# Dummies (-,-) are placeholders to save valid ranges as a matrix.
+                         INTERVAL:
+NEURON_0 (0.78,2.3500000000000076)
+
+OFB_WEIGHTS_MODULE_0
+# none
+                  OUTPUT_NEURON_0      OUTPUT_NEURON_1
+RES_NEURON_0  0.30962732485596933  0.12874778334684156
+RES_NEURON_1 -0.12348665343282306   0.3927032641146555
+RES_NEURON_2   0.3749932850950283  0.16637972884554875
+RES_NEURON_3 -0.11169713955748417  -0.1634906498672778
+RES_NEURON_4   0.1090524201046752  0.06663101726103982
+RES_NEURON_5  0.15731817689436023 -0.39025311859609313
+RES_NEURON_6  0.26963690644267135  0.17257500085488287
+
+RESERVOIR_INIT_WEIGHTS_MODULE_0
+# none
+               RESERVOIR_NEURON_0   RESERVOIR_NEURON_1   RESERVOIR_NEURON_2  RESERVOIR_NEURON_3   RESERVOIR_NEURON_4   RESERVOIR_NEURON_5  RESERVOIR_NEURON_6
+RES_NEURON_0  -0.8998761551845189  0.13326203452207963 -0.18103884827012795  -0.540803313112713 -0.31926125907371783 0.015402016671170138 -0.5325565677180693
+RES_NEURON_1  0.33489617040055975   0.3901342341836469  -0.4185465650315836  0.3774296457580988  0.34515000170976573   0.6422806482958441  0.8302159831124241
+RES_NEURON_2   0.8402868659795382   0.2574955666936831   0.9051513688888886  0.5306623063622622  -0.8791253807096755    0.785406528229311 -0.3269812997345556
+RES_NEURON_3 -0.03730584181764729 -0.11923107384547182  -0.9945343462287959 0.32214105296240203   0.7795413407112655  0.19983967512302314  0.7175796244192252
+RES_NEURON_4   0.6762303557854421   0.3327594576910975  -0.7805062371921863 -0.2322574896891918  -0.8581466799754813  -0.4405197253430644 -0.6008815943320971
+RES_NEURON_5  -0.3144446248138175  0.09322814087916353  -0.1566249725695268 -0.5903929388583005  -0.6345635963775003   0.9546115942508957 -0.7919201793829105
+RES_NEURON_6   0.8318566833697056   0.6851804844428895 -0.13816627466156772 0.14736779514043796   -0.933923298932769   0.8832154433863093 -0.2140829682694656
+
+CONNECTIVITY_OF_MODULES_MODULE_0
+# On the main diagonal there are values of exclusive connectivity.
+# Outside the main diagonal there is connectivity in overlaps between the modules.
+         MODULE:
+MODULE_0     1.0
+
+CONNECTIVITY_MATRIX_OF_RESERVOIR_MODULE_0
+# none
+               END_NEURON_0 END_NEURON_1 END_NEURON_2 END_NEURON_3 END_NEURON_4 END_NEURON_5 END_NEURON_6
+BEGIN_NEURON_0            1            1            1            1            1            1            1
+BEGIN_NEURON_1            1            1            1            1            1            1            1
+BEGIN_NEURON_2            1            1            1            1            1            1            1
+BEGIN_NEURON_3            1            1            1            1            1            1            1
+BEGIN_NEURON_4            1            1            1            1            1            1            1
+BEGIN_NEURON_5            1            1            1            1            1            1            1
+BEGIN_NEURON_6            1            1            1            1            1            1            1
+
+ACTIVATION_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             ACTIVATIONS:
+RES_NEURON_0         TANH
+RES_NEURON_1         TANH
+RES_NEURON_2         TANH
+RES_NEURON_3         TANH
+RES_NEURON_4         TANH
+RES_NEURON_5         TANH
+RES_NEURON_6         TANH
+
+BIAS_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             BIASES:
+RES_NEURON_0     0.0
+RES_NEURON_1     0.0
+RES_NEURON_2     0.0
+RES_NEURON_3     0.0
+RES_NEURON_4     0.0
+RES_NEURON_5     0.0
+RES_NEURON_6     0.0
+
+MODULE_SIZES_MODULE_0
+# none
+         SIZES:
+MODULE_0      7
+
+SPECTRAL_RADII_OF_RESERVOIR_MODULES_MODULE_0
+# none
+         SPECTRAL_RADII:
+MODULE_0             0.9
+
+RESERVOIR_TOPOLOGY_MODULE_0
+# none
+        VALUES:
+VALUE_0  RANDOM
+
+LEAKAGE_RATE_OF_RESERVOIR_NEURONS_MODULE_0
+# none
+             LEAKAGE_RATE:
+RES_NEURON_0           0.5
+RES_NEURON_1           0.5
+RES_NEURON_2           0.5
+RES_NEURON_3           0.5
+RES_NEURON_4           0.5
+RES_NEURON_5           0.5
+RES_NEURON_6           0.5
+
+VALID_RANGES_OF_RESERVOIR_NEURONS_MODULE_0
+# Dummies (-,-) are placeholders to save valid ranges as a matrix.
+                                         INTERVAL:
+NEURON_0 (-0.19351005594089332,0.2436832913551564)
+NEURON_1  (-1.406054579021352,0.21224754593625783)
+NEURON_2 (-1.9730457588305803,-1.9394233922211277)
+NEURON_3    (1.845944615298245,1.9547764651659918)
+NEURON_4   (1.4294108820601568,1.8546595454478396)
+NEURON_5   (-1.8521713433011704,-1.39839895499053)
+NEURON_6 (-1.9554121102122166,-1.8449128134068076)
+
+OUTPUT_WEIGHTS_MODULE_0
+# first END neurons are reservoir neurons;
+# next END neurons are ESN's output neurons (self-recurrent connections);
+# final END neurons are input neurons
+                   END_NEURON_0       END_NEURON_1        END_NEURON_2        END_NEURON_3       END_NEURON_4       END_NEURON_5        END_NEURON_6       END_NEURON_7
+OUT_NEURON_0 -22.15167570051442  6.681594028320187 0.25460150953852545  0.6782950185691194 20.322053771536684 -4.598092453342327 -0.9108609441926897 -1.580762947787889
+OUT_NEURON_1  55.43216171948492 -7.319170531758581  -1.359202921299452 -0.5433117409641202 -48.86515212305954 12.662007895708022   2.228686154325012  6.388498353769672
+
+ACTIVATION_OF_OUTPUT_NEURONS_MODULE_0
+# none
+             ACTIVATIONS:
+OUT_NEURON_0           ID
+OUT_NEURON_1           ID
+
+BIAS_OF_OUTPUT_NEURONS_MODULE_0
+# none
+             BIAS:
+OUT_NEURON_0   0.0
+OUT_NEURON_1   0.0
+
+MINIMUM_AND_MAXIMUM_OF_OUTPUT_NEURONS_MODULE_0
+# The left value is the smallest value.
+# The right value is the largest value.
+                                          VALUES:
+VALUE_0  (-0.407013871782385,0.40250382570124477)
+VALUE_1 (-0.49848871986831966,0.4973151753211926)
